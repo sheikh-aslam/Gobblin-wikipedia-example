@@ -1,0 +1,17 @@
+###########################################################################################################################################################################################
+############################################################################ Standalone Run commands ######################################################################################
+###########################################################################################################################################################################################
+
+#start process
+bin/gobblin-standalone.sh start --workdir /home/cloudera/gobblin/wikipediaExp/  --conf /home/cloudera/gobblin/wikipediaExp/conf/  --logdir /home/cloudera/gobblin/wikipediaExp/log/
+
+#stop the process
+bin/gobblin-standalone.sh stop
+
+
+# cleck process
+ps -eaf | grep gobblin
+ps -eaf | grep PullFromWikipedia
+
+#kill process if any remain open
+kill -9 processID
